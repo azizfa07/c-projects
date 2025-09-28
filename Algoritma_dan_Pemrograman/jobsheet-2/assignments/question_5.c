@@ -127,10 +127,11 @@ int main() {
                     printf("format tidak valid");
                 }
             }
+            break;
         case 2 : {
                 float suhu;
 
-                printf("Pilih Suhu awwal yang ingin dikonversi: \n");
+                printf("Pilih Suhu awal yang ingin dikonversi: \n");
                 printf("[1] Celcius\n");
                 printf("[2] Fahrenheit\n");
                 printf("[3] Kelvin\n");
@@ -187,6 +188,7 @@ int main() {
                 default: {
                     printf("format tidak valid");
                 }
+                break;
         }
         case 3 : {
                 float mata_uang;
@@ -200,7 +202,7 @@ int main() {
                 printf("Dinar Kuwait (KWD) : %.4f\n", hasil_rupiah.dinar_kuwait);
                 printf("Euro (EUR)         : %.4f\n", hasil_rupiah.euro);
                 printf("Dollar US (USD)    : %.4f\n", hasil_rupiah.usd);
-                break;
             }
+            break;
     }
-}
+};

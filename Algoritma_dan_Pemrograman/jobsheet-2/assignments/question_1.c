@@ -6,6 +6,7 @@ int main() {
     float harga_pulpen = 3000.0;
     float special_school_toolset = 200000.0;
     float total_harga_barang = 0.0;
+    float diskon_harga_barang = 0.0;
     int pilihan;
 
     printf("Daftar Barang yang Tersedia:\n");
@@ -13,7 +14,7 @@ int main() {
     printf("[2] Pensil (Rp %.2f)\n", harga_pensil);
     printf("[3] Pulpen (Rp %.2f)\n", harga_pulpen);
     printf("[4] Special school toolset (Rp %.2f)\n", special_school_toolset);
-    printf("0. Selesai (untuk mengakhiri input)\n\n");
+    printf("[0] Selesai (untuk mengakhiri input)\n\n");
 
     do {
         printf("Masukkan nomor barang yang ingin dibeli (0 untuk selesai): ");
@@ -45,7 +46,9 @@ int main() {
     } while (pilihan != 0);
 
     if (total_harga_barang >= 200000.0) {
-        total_harga_barang = total_harga_barang - (total_harga_barang * 0.05);
+        diskon_harga_barang = total_harga_barang * 0.05;
+        total_harga_barang = total_harga_barang - diskon_harga_barang;
+        printf("selamat anda mendapatkan potongan sebesar 5% (Rp. %.2f)\n", diskon_harga_barang);
     } else {
         return total_harga_barang;
     }
