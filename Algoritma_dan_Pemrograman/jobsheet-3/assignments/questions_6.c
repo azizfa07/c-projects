@@ -4,11 +4,15 @@ int main() {
     int tinggi = 5;
     int i, j;
 
-    for (i = tinggi; i >= 1; i--) {
-        for (j = 1; j <= i; j++) {
+    i = tinggi;
+    while (i >= 1) {
+        j = 1;
+        while (j <= i) {
             printf("%d", i);
+            j++;
         }
         printf("\n");
+        i--;
     }
 
     return 0;

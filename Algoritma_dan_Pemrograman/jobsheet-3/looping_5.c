@@ -12,5 +12,5 @@ int X, Y;
     }
 }
 
-// Bagaimanakan keluaran programnya bila perinth pada baris 11 diganti dengan printf(“%d%d”, Y,X);
+// Bagaimanakan keluaran programnya bila perintah pada baris 11 diganti dengan printf(“%d%d”, Y,X);
 // Hasilnya sama saja

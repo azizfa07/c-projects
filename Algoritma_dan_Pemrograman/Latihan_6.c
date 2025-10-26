@@ -3,14 +3,15 @@
 int main() {
 
     int pilih;
-    float panjang, lebar, jari2, alas, tinggi, keliling, luas;
+    float panjang, lebar, jari2, sisi, alas, tinggi, keliling, luas;
     char satuan [10];
 
     int phi = 22/7;
 
-    printf("Luas dan Keliling\n\n");
+    printf("Luas dan Keliling\n");
     printf("[1] Lingkaran\n");
-    printf("[2] Persegi panjang\n\n");
+    printf("[2] Persegi panjang\n");
+    printf("[3] Segitiga sama sisi\n");
     printf("Masukkan angka dari pilihan yang tersedia: ");
     scanf("%d", &pilih);
 
@@ -50,12 +51,22 @@ int main() {
             printf("Keliling Persegi Panjang adalah     : %.2f %s\n", keliling, satuan);
             break;
         case 3:
-            printf("Luas dan Keliling Segitiga\n");
-            printf("Masukkan besaran alas               : ");
+            printf("Luas dan Keliling Segitiga sama sisi\n");
+            printf("Masukkan besaran alas             : ");
             scanf("%f", &alas);
-            printf("Masukkan besaran tinggi             : ");
-            scanf("%f", &tinggi);
-        default:
-            printf("Jalankan program kembali untuk menghitung luas dan keliling suatu banngun datar :)");
+            printf("Masukkan besaran sisi             : ");
+            scanf("%f", &sisi);
+            printf("Masukkan satuan                   : ");
+            scanf("%s", satuan);
+
+            tinggi = sisi * (1.73205 / 2.0);
+            luas = 0.5 * alas * tinggi;
+            keliling = 3 * sisi;
+
+            printf("Luas segitiga sama sisi adalah         : %.2f %s²\n", luas, satuan);
+            printf("Keliling segitiga sama sisi adalah     : %.2f %s\n", keliling, satuan);
+        default: {
+            printf("Jalankan program kembali untuk menghitung luas dan keliling suatu banngun datar :)\n");
+        }
     }
 }

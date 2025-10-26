@@ -6,7 +6,6 @@ int main () {
     float Panjang, Lebar, Sisi, Jari2, phi, Luas, Keliling;
     int Pilihan;
 
-    // Loop utama program
     do {
         printf("\n--- Menghitung Luas dan Keliling Bangun Datar ---\n");
         printf("[1] Persegi Panjang\n");
@@ -18,7 +17,7 @@ int main () {
         scanf("%d", &Pilihan);
 
         switch (Pilihan) {
-            case 1: { // Persegi Panjang menggunakan for(;;)
+            case 1: {
                 char lanjut;
                 for (;;) {
                     printf("\n-- Menghitung Persegi Panjang --\n");
@@ -44,9 +43,8 @@ int main () {
                 break;
             }
 
-            case 2: { // Lingkaran menggunakan while(1)
+            case 2: {
                 char lanjut; phi = 22/7;
-                // 'while(1)' atau 'while(true)' menciptakan loop tak terbatas
                 while (1) {
                     printf("\n-- Menghitung Lingkaran --\n");
                     printf("Masukkan Jari-jari : ");
@@ -61,7 +59,6 @@ int main () {
                     printf("\nHitung lagi? (y/t) : ");
                     scanf(" %c", &lanjut);
 
-                    // Kondisi untuk keluar dari loop while
                     if (lanjut == 't' || lanjut == 'T') {
                         printf("Kembali ke menu utama...\n");
                         break;
@@ -70,7 +67,7 @@ int main () {
                 break;
             }
 
-            case 3: { // Segitiga menggunakan do-while
+            case 3: {
                 char lanjut;
                 do {
                     printf("\n-- Menghitung Segitiga Sama Sisi --\n");
@@ -86,7 +83,6 @@ int main () {
                     printf("\nHitung lagi? (y/t) : ");
                     scanf(" %c", &lanjut);
 
-                // Loop akan terus berjalan selama 'lanjut' adalah 'y' atau 'Y'
                 } while (lanjut == 'y' || lanjut == 'Y');
 
                 printf("Kembali ke menu utama...\n");
